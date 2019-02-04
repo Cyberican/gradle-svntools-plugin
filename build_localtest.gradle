@@ -1,0 +1,12 @@
+buildscript {
+    repositories { flatDir { dirs 'build/libs' } }
+    dependencies {
+        classpath group: 'at.bxm.gradleplugins.svntools', name: 'gradle-svntools-plugin', version: '2.2-SNAPSHOT' // Adapt local version here for testing
+    }
+}
+
+apply plugin: 'at.bxm.gradleplugins.svntools.svntools-plugin'
+
+// USE:
+// ./gradlew spotlessApply build
+// ./gradlew -b .\build_localtest.gradle dummyTask
